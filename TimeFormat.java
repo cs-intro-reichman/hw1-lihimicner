@@ -18,6 +18,11 @@ public class TimeFormat {
 		} else if  (hours >= 12 && hours < 24) {
 			timezone = "PM";
 		}
+		if (hours == 0) {
+   			hours = 12; 
+		} else if (hours > 12) {
+    		hours -= 12; 
+		}	
 		if (minutes < 10) {
 			System.out.println(hours + ":0" + minutes + " " + timezone);
 		} else {
